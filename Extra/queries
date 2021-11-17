@@ -1,0 +1,9 @@
+select p.product_name"Product",c.category_name"Category",p.product_price"Unit Price",oi.quantity"Quantity",p.product_price*oi.quantity"XPrice",o.total_price"Total Price" from category as c,product as p,orderitems as oi,order1 as o where p.product_id=oi.product_id and o.order_id=oi.order_id and c.category_id=p.category_id and o.order_id=25
+
+select o.order_id,o.ordertime from order1 as o where day(o.ordertime)=(select day(now()))
+
+select o.order_id,o.ordertime from order1 as o where day(o.ordertime)=(select day(now())) and order_status=0 and hour(o.ordertime)=(select hour(now()));
+
+select count(*) from (select o.ordertime from order1 as o where day(o.ordertime)=(select day(now())) and order_status=0 and hour(o.ordertime)=(select hour(now()))) as x
+
+select u.user_name"customer",uu.user_name"bhai",f.feedback_description,f.order_id from user as u,user as uu,feedback as f where u.user_id=f.customer_id and uu.user_id=f.bhai_id 

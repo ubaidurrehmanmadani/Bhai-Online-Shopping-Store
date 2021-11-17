@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Categories - Admin Dashboard</title>
+
+		<!-- Bootstrap Core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/Chart.min.js"></script>
+		<!-- Custom CSS -->
+		<link href="css/simple-sidebar.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+		<link href="css/font-lineicons.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+<body>	 
+	<table width="100%" class="topLine">
+		<tr>
+			<td id="aa" width="20%"></td>
+			<td id="bb" width="15%"></td>
+			<td id="cc" width="15%"></td>
+			<td id="dd" width="15%"></td>
+			<td id="ee" width="15%"></td>
+			<td id="ff" width="20%"></td>
+		</tr>
+	</table>
+	
+	<div class="topbar">
+		<div class="abvNav">
+			<b>Admin Dashboard</b>
+			
+		</div>
+		<div style="position: relative;">
+			<a href="#menu-toggle" class="btn btn-" id="menu-toggle"><i class="fa fa-bars" style="font-size:1.5em;"></i></a> 
+		</div>
+	</div>
+	
+	
+	
+    <div id="wrapper">
+
+	
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				
+				<div class="row">
+					
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box" style="padding-top:10px;">
+						<span style="font-size:0.95em;color:#449D44;"><b>Add New Category</b></span>
+						<hr />
+						<form method="POST" action="" >
+						<div class="row" style="padding-top:10px;">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="padding-top:6px;">
+								<b>Category Name</b>
+							</div>
+							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+								<input type="text" class="form-control" name="cat_name" placeholder="Category Name"  required  />
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-lg-12  col-md-12 col-sm-12 col-xs-12" >
+								<hr>
+							</div>
+						</div>
+						<div class="row" style="padding-top:10px;">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="padding-top:6px;">
+								<b>Category Description</b>
+							</div>
+							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+								<textarea name="cat_des" class="form-control" placeholder="Category Description" ></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12  col-md-12 col-sm-12 col-xs-12" >
+								<hr>
+							</div>
+						</div>
+						<div class="row" style="padding-top:10px;">
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="padding-top:6px;">
+								<b>Parent Category</b>
+							</div>
+							<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+								<label for="parent">Select list:</label>
+								<select name="cat_parent" id="parent" class="form-control">
+									<option selected value="0">--Select Parent--</option>
+								</select>
+								<br />
+								<span style="color:grey;font-size:0.85em">Leave empty if no parent.</span>
+								<br />
+								<span style="color:green;"></span>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12  col-md-12 col-sm-12 col-xs-12" >
+								<hr>
+							</div>
+						</div>
+						<div class="row" style="padding-top:10px;">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom:5px;text-align:right;">
+								<span style="color:red;"></span><br />
+								 <input type="submit" name="submit" class="btn btn-success" value="Add Category"   />
+							</div>
+							
+						</div>
+						
+						</form>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 "  >
+						<div class="box" style="width:100%;padding:10px;">
+							<span style="font-size:0.95em;color:#449D44;"><b>All Categories</b></span> 
+							<hr>
+							
+									<i class="fa fa-dot-circle-o" style="color:#5CB85C;" ></i> <b>
+									<br />
+							
+						</div>
+					</div>
+					 
+					 
+				</div>
+                <br />
+				 
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
